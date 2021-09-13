@@ -11,6 +11,7 @@ public class DecksOfCards {
         CardsPlay play = new CardsPlay(playerCount);
         play.generateCards();
         play.addPlayer();
+        play.setPlayerSequence();
         play.distributeCards();
         play.printCardList();
     }

@@ -87,4 +87,23 @@ public class CardsPlay {
             System.out.print("\n ");
         }
     }
+    public void setPlayerSequence(){
+
+        Scanner sc = new Scanner(System.in);
+        int PlaylistSize = playerList.size();
+
+        for(int i=0; i < PlaylistSize; i++){
+
+            Player temp = playerList.get(i);
+            System.out.print("\n Set player position for (staring from 0) "+ temp.name +" : ");
+            int newPosition = sc.nextInt();
+            if(newPosition > PlaylistSize || newPosition < 0){
+                System.out.print("\n Invalid position !!");
+                return;
+            }
+
+            playerList.set(i,playerList.get(newPosition));
+            playerList.set(newPosition,temp);
+        }
+    }
 }
