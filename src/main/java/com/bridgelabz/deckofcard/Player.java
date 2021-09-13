@@ -5,19 +5,16 @@ import java.util.ArrayList;
 public class Player {
     String name;
     ArrayList<String> cardList = new ArrayList<>();
-
-    public Player(String name) {
+    public Player(String name){
         this.name = name;
     }
-
-    public void setCardList(String card) {
+    public void setCardList(String card){
         cardList.add(card);
     }
-
-    public void getCardList() {
+    public void getCardList(){
         //get all cards inside cardList
-        for (String position : cardList) {
-            System.out.print(position + ", ");
+        for(String position : cardList){
+            System.out.print(position+", ");
         }
     }
 }
